@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background-color: rgba(0,0,0,0);
+            color: darkgray;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 2; /* Убедитесь, что заголовок выше фонов */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: darkgray;
+            text-decoration: none;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            height: calc(100vh - 80px); /* Учтите высоту header */
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            max-width: 80%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .text-section {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .text-section h2 {
+            margin: 0;
+            padding: 10px 0;
+            position: relative;
+            z-index: 2; /* Помещаем заголовок поверх текста */
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 5px;
+        }
+
+        .text-section p {
+            margin: 10px 0 0;
+            padding: 10px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .corner-image {
+            position: fixed;
+            width: 50vw;
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+
+        .top-left {
+            top: 0;
+            left: 0;
+            background-image: url('auto.jpg');
+        }
+
+        .top-right {
+            top: 0;
+            right: 0;
+            background-image: url('guitar.jpg');
+        }
+
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+            background-image: url('travel.jpg');
+        }
+
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+            background-image: url('book.jpg');
+        }
+
+        .corner-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Hobbies</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Main</a></li>
+                <li><a href="hobbies.html">Hobby</a></li>
+                <li><a href="contactme.html">Contact me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="text-section">
+            <h2>Cars</h2>
+            <p>I read a lot about cars and their components. I like to experiment with my father's car, cleaning some components or adding new ones.</p>
+        </div>
+        <div class="text-section">
+            <h2>Guitar</h2>
+            <p>I play the guitar a lot, it gives me the opportunity to vent emotions, develop fine motor skills and develop the creative side of thinking.</p>
+        </div>
+        <div class="text-section">
+            <h2>Journeys</h2>
+            <p>Traveling gives me the opportunity to learn new cultures, get to know different traditions and enjoy beautiful landscapes. I try to visit new countries and cities to expand my horizons.</p>
+        </div>
+        <div class="text-section">
+            <h2>Reading</h2>
+            <p>Reading allows me to expand my horizons, gain new knowledge and immerse myself in fascinating stories. I prefer to read both fiction and nonfiction.</p>
+        </div>
+    </main>
+    <div class="corner-image top-left"></div>
+    <div class="corner-image top-right"></div>
+    <div class="corner-image bottom-left"></div>
+    <div class="corner-image bottom-right"></div>
+</body>
+</html>
